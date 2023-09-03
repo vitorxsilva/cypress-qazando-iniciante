@@ -9,7 +9,7 @@ jobs:
 # só teremos 1 jog: rodar os testes
   cypress-run:
   #maquina q será executada
-    runs-on: ubunto-latest
+    runs-on: ubuntu-20.04
     #passo a passo para rodar os test
     steps:
     #CLONE DO PROJETOI
