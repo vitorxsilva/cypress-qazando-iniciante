@@ -30,7 +30,7 @@ cy.get('#user')
   },
 
   preencherSenha(senha){
-    cy.get ('#passwordX')
+    cy.get ('#password')
     .type(senha)
   },
 
