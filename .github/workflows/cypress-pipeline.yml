@@ -9,7 +9,7 @@ jobs:
 # só teremos 1 jog: rodar os testes
   cypress-run:
   #maquina q será executada
-    runs-on: ubunto-latest   
+    runs-on: ubuntu-20.04
     #passo a passo para rodar os test
     steps:
     #CLONE DO PROJETOI
@@ -17,8 +17,8 @@ jobs:
         uses: actions/checkout@v3
     # EXEMPLO DE EXECUÇÃO NO TERMINAL
       - name: instalar dependencias do projeto
-        run: echo Vitor Otávio
-        
+        run: npm install
+
       - name: Run TESTES
         uses: cypress-io/github-action@v6
         with:
