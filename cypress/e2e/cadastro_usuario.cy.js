@@ -49,7 +49,8 @@ cadastro_page.validarMensagemErro ('O campo e-mail deve ser prenchido corretamen
     })
 
     it('Cadastro com sucesso',() =>{
-        cadastro_page.preencheNome('NOME_RECORD_KEY')
+       const teste = Cypress.env('NOME_RECORD_KEY')
+        cadastro_page.preencheNome(teste)
         cadastro_page.preencheEmail('vitor@sensedia.com')
         cadastro_page.preencherSenha('123456')
         cadastro_page.clicarCadastrar()
