@@ -3,6 +3,8 @@ import { faker } from '@faker-js/faker';
 import cadastro_page from '../support/pages/cadastro_usuario_page'
 import commum_page from '../support/pages/commum_page'
 
+
+
 describe ('Cadastro de usuario',() =>{
 
 beforeEach ('Acessar cadastro de usuário', () => {
@@ -47,8 +49,7 @@ cadastro_page.validarMensagemErro ('O campo e-mail deve ser prenchido corretamen
     })
 
     it('Cadastro com sucesso',() =>{
-        const myVariable = Cypress.env('NOME_RECORD_KEY');
-        cadastro_page.preencheNome(myVariable)
+        cadastro_page.preencheNome('NOME_RECORD_KEY')
         cadastro_page.preencheEmail('vitor@sensedia.com')
         cadastro_page.preencherSenha('123456')
         cadastro_page.clicarCadastrar()
