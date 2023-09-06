@@ -25,6 +25,7 @@ jobs:
           record: true
         env: 
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          NOME_RECORD_KEY: ${{secrets.NOME_RECORD_KEY}}
 
       ##upload relatorio mocka
       - name: upload relatorio
