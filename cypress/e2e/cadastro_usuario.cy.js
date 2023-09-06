@@ -19,9 +19,9 @@ commum_page.acessarCadastrousuario()
     
     
     it('Campo email vazio',() =>{
-    const nome = process.env.NOME_RECORD_KEY
+  
 
-cadastro_page.preencheNome(nome)
+cadastro_page.preencheNome('Vitor')
 cadastro_page.clicarCadastrar()
 cadastro_page.validarMensagemErro ('O campo e-mail deve ser prenchido corretamente')
     })
@@ -49,7 +49,8 @@ cadastro_page.validarMensagemErro ('O campo e-mail deve ser prenchido corretamen
     })
 
     it('Cadastro com sucesso',() =>{
-        cadastro_page.preencheNome('vitor')
+        const nome = process.env.NOME_RECORD_KEY
+        cadastro_page.preencheNome(nome)
         cadastro_page.preencheEmail('vitor@sensedia.com')
         cadastro_page.preencherSenha('123456')
         cadastro_page.clicarCadastrar()
