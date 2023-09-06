@@ -25,7 +25,9 @@ jobs:
           record: true
         env: 
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          NOME_RECORD_KEY: ${{ secrets.NOME_RECORD_KEY }}
+          CYPRESS_NOME_RECORD_KEY: ${{ secrets.NOME_RECORD_KEY }}
+        
+        run: npm run cypress-run
 
       ##upload relatorio mocka
       - name: upload relatorio
